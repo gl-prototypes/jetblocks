@@ -1,0 +1,5 @@
+{{block input(placeholder="", size="")}}
+<div class="ui{{isset(size) ? " " + size : ""}} input">
+  <input placeholder="{{ placeholder }}" />
+</div>
+{{end}}

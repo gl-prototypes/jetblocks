@@ -1,0 +1,15 @@
+{{block menu(fixed="")}}
+<div class="{{isset(fixed) ? " " + fixed : ""}} menu">
+  {{yield content}}
+</div>
+{{end}}
+
+{{block menuItem(link=false, header=false)}}
+{{if link}}
+<a class="{{header ? "header" : ""}} item">{{yield content}}</a>
+{{else}}
+<div class="{{header ? "header" : ""}} item">
+  {{yield content}}
+</div>
+{{end}}
+{{end}}
